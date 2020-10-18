@@ -14,7 +14,6 @@ echo "...done"
 for file in $files; do
     echo "Creating symlink to $file in home directory."
     if [ -f "$HOME/$file" ]; then
-        echo "hi"
 	    rm "$HOME/$file"
     fi
     ln -s "$dir/$file" "$HOME/$file"
