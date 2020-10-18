@@ -1,0 +1,14 @@
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[user]
+	name = junnys6018
+	email = junkanglim1@gmail.com
+[core]
+	editor = vim
+	autocrlf = true
+[alias]
+	unstage = reset HEAD --
+	lg = log --oneline --all --graph
