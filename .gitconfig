@@ -3,12 +3,21 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+
 [user]
 	name = junnys6018
 	email = junkanglim1@gmail.com
+
 [core]
 	editor = vim
 	autocrlf = true
+	pager = delta
+
 [alias]
 	unstage = reset HEAD --
 	lg = log --oneline --all --graph
+
+[delta]
+    syntax-theme = Monokai Extended
+	line-numbers = true
+	side-by-side = true
