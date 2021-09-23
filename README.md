@@ -8,4 +8,4 @@ Personal dotfiles
 
 ## Additional configuration files
 - registry file for windows terminal
-- regisrty file for vs code
+- registry file for vs code
