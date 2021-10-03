@@ -38,11 +38,13 @@ else
     cat "$HOME/.dotfiles/banner.txt"
 fi
 
-echo "TODOs"
-echo ""
-pushd $TODO_DIR > /dev/null
-python list_todo.py
-popd > /dev/null
+if [ -d $TODO_DIR ]; then
+    echo "TODOs"
+    echo ""
+    pushd $TODO_DIR > /dev/null
+    python list_todo.py
+    popd > /dev/null
+fi
 
 
 # place extra settings you dont want checked into version control in a file called ~/.external.sh
