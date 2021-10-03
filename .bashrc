@@ -1,7 +1,14 @@
 # aliases
 alias mycc="cc -std=c99 -Wall -pedantic -Werror"
-alias dev="cd /d/dev"
 alias gs="git status"
+alias python=python3
+
+# detect git bash or wsl
+if [ "$(uname)" == "Linux" ]; then
+    alias dev="cd /mnt/d/dev"
+else
+    alias dev="cd /d/dev"
+fi
 
 # Customise ls
 alias ls='ls --color=auto'
@@ -15,10 +22,19 @@ PATH=$PATH:/d/path
 . ~/.dotfiles/git-prompt.sh
 
 # export GIT_PS1_SHOWDIRTYSTATE=1
-alias python=python3
 export GPG_TTY=$(tty)
 
 export PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u \[\033[35m\](\@) \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ '
+
+# greeting prompt
+
+# use lolcat if available
+if command -v lolcat &> /dev/null
+then
+    lolcat "$HOME/.dotfiles/banner.txt"
+else
+    cat "$HOME/.dotfiles/banner.txt"
+fi
 
 # place extra settings you dont want checked into version control in a file called ~/.external.sh
 if [ -f "$HOME/.external.sh" ]; then
