@@ -6,8 +6,10 @@ alias python=python3
 # detect git bash or wsl
 if [ "$(uname)" == "Linux" ]; then
     alias dev="cd /mnt/d/dev"
+    TODO_DIR="/mnt/d/dev/todo"
 else
     alias dev="cd /d/dev"
+    TODO_DIR="/d/dev/todo"
 fi
 
 # Customise ls
@@ -35,6 +37,13 @@ then
 else
     cat "$HOME/.dotfiles/banner.txt"
 fi
+
+echo "TODOs"
+echo ""
+pushd $TODO_DIR > /dev/null
+python list_todo.py
+popd > /dev/null
+
 
 # place extra settings you dont want checked into version control in a file called ~/.external.sh
 if [ -f "$HOME/.external.sh" ]; then
