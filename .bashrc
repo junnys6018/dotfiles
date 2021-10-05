@@ -5,19 +5,20 @@ alias python=python3
 
 # detect git bash or wsl
 if [ "$(uname)" == "Linux" ]; then
-    alias dev="cd /mnt/d/dev"
-    TODO_DIR="/mnt/d/dev/todo"
+    D_DRIVE="/mnt/d"
 else
-    alias dev="cd /d/dev"
-    TODO_DIR="/d/dev/todo"
+    D_DRIVE="/d"
 fi
+
+alias dev="cd $D_DRIVE/dev"
+TODO_DIR="$D_DRIVE/dev/todo"
+PATH="$PATH:$D_DRIVE/path"
 
 # Customise ls
 alias ls='ls --color=auto'
 LS_COLORS="fi=03:ex=03:ow=94"
 export LS_COLORS
 
-PATH=$PATH:/d/path
 
 # git
 . ~/.dotfiles/git-completion.bash
