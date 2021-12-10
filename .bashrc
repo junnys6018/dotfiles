@@ -52,3 +52,6 @@ fi
 if [ -f "$HOME/.external.sh" ]; then
     . "$HOME/.external.sh"
 fi
+
+# increase the maximum number of entries in .bash_history
+export HISTSIZE=99999
