@@ -10,9 +10,10 @@
 
 [core]
 	editor = vim
-	autocrlf = true
 	pager = delta
 
+[interactive]
+	diffFilter = delta --color-only
 [alias]
 	unstage = reset HEAD --
 	lg = log --oneline --all --graph --decorate
