@@ -18,6 +18,7 @@
 	unstage = reset HEAD --
 	lg = log --oneline --all --graph --decorate
 	ll = log --pretty=format:'%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn]' --decorate --numstat
+	co = checkout
 
 [delta]
     syntax-theme = ansi
@@ -28,3 +29,5 @@
 	helper = /usr/bin/git-credential-manager-core
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+[submodule]
+	recurse = true
