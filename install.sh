@@ -2,7 +2,7 @@
 dir=$HOME/.dotfiles 
 
 # list of files/folders to symlink in homedir
-files=".bashrc .bash_profile .gitconfig"
+files=".bashrc .bash_profile .gitconfig .tmux.conf"
 
 # change to the dotfiles directory
 echo "Changing to the $dir directory"
