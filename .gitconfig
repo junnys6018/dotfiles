@@ -14,6 +14,7 @@
 
 [interactive]
 	diffFilter = delta --color-only
+
 [alias]
 	unstage = reset HEAD --
 	lg = log --oneline --all --graph --decorate
@@ -22,12 +23,19 @@
 
 [delta]
     syntax-theme = ansi
+	navigate = true
 	line-numbers = true
 	side-by-side = true
+
+[include]
+	path = /Users/junlim/dev/delta/themes.gitconfig
+
 [credential]
 	credentialStore = gpg
 	helper = /usr/bin/git-credential-manager-core
+
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+
 [submodule]
 	recurse = true
