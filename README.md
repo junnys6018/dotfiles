@@ -9,4 +9,3 @@ Personal dotfiles
 ## Additional configuration files
 - registry file for windows terminal
 - registry file for vs code
-

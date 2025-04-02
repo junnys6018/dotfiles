@@ -154,7 +154,8 @@
   # '─'. The last two make it easier to see the alignment between left and right prompt and to
   # separate prompt from command output. You might want to set POWERLEVEL9K_PROMPT_ADD_NEWLINE=false
   # for more compact prompt if using this option.
-  typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_CHAR=' '
+  typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_CHAR='─' # solid line
+  # typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_CHAR=' ' # no filler
   typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_BACKGROUND=
   typeset -g POWERLEVEL9K_MULTILINE_NEWLINE_PROMPT_GAP_BACKGROUND=
   if [[ $POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_CHAR != ' ' ]]; then
@@ -167,14 +168,25 @@
     typeset -g POWERLEVEL9K_EMPTY_LINE_RIGHT_PROMPT_FIRST_SEGMENT_START_SYMBOL='%{%}'
   fi
 
+  # Vertical separators
+  # # Separator between same-color segments on the left.
+  # typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='\u2502'
+  # # Separator between same-color segments on the right.
+  # typeset -g POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR='\u2502'
+  # # Separator between different-color segments on the left.
+  # typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
+  # # Separator between different-color segments on the right.
+  # typeset -g POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=''
+
+  # Slanted separators
   # Separator between same-color segments on the left.
-  typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='\u2502'
+  typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='\u2571'
   # Separator between same-color segments on the right.
-  typeset -g POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR='\u2502'
+  typeset -g POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR='\u2571'
   # Separator between different-color segments on the left.
-  typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
+  typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='\uE0BC'
   # Separator between different-color segments on the right.
-  typeset -g POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=''
+  typeset -g POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR='\uE0BA'
   # To remove a separator between two segments, add "_joined" to the second segment name.
   # For example: POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(os_icon context_joined)
 
@@ -192,7 +204,7 @@
   #################################[ os_icon: os identifier ]##################################
   # OS identifier color.
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=232
-  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=15
+  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=7
   # Custom icon.
   # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
 
@@ -520,7 +532,7 @@
   typeset -g POWERLEVEL9K_STATUS_OK=true
   typeset -g POWERLEVEL9K_STATUS_OK_VISUAL_IDENTIFIER_EXPANSION='✔'
   typeset -g POWERLEVEL9K_STATUS_OK_FOREGROUND=2
-  typeset -g POWERLEVEL9K_STATUS_OK_BACKGROUND=15
+  typeset -g POWERLEVEL9K_STATUS_OK_BACKGROUND=7
 
   # Status when some part of a pipe command fails but the overall exit status is zero. It may look
   # like this: 1|0.
