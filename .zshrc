@@ -1,5 +1,5 @@
 if [ "$TERM_PROGRAM" != tmux ]; then
-  fastfetch
+  fastfetch --load-config ~/.dotfiles/fastfetch.jsonc
 fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
