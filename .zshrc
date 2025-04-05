@@ -115,5 +115,7 @@ alias ls="colorls"
 alias cb="pbcopy"
 alias python="python3"
 
+export EDITOR=nvim
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
