@@ -8,7 +8,7 @@
 	email = 48525532+junnys6018@users.noreply.github.com
 	signingkey = D41DDCCD0896B0CE1E9F5395583DDE583BB9782C
 [core]
-	editor = vim
+	editor = nvim
 	pager = delta
 [interactive]
 	diffFilter = delta --color-only
