@@ -1,3 +1,4 @@
+-- TODO: auto format
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 

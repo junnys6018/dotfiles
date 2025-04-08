@@ -1,4 +1,5 @@
 -- Highlight, edit, and navigate code
+-- TODO: format this
 return {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',

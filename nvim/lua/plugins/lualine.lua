@@ -3,7 +3,7 @@ return {
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
         require('lualine').setup({
-            options = { 
+            options = {
                 theme = 'ayu_mirage',
                 section_separators = { left = '', right = '' },
             }
