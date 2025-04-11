@@ -114,6 +114,7 @@ alias gs="git status"
 alias ls="colorls"
 alias cb="pbcopy"
 alias python="python3"
+alias cat="bat --paging=never --style=-grid,-numbers,-header"
 
 export EDITOR=nvim
 
